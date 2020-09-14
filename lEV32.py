@@ -20,11 +20,7 @@ def update_line(num, data, line):
 
 fig1 = plt.figure()
 
-# Fixing random state for reproducibility
-# np.random.seed(19680801)
 
-
-# To save the animation, use the command: line_ani.save('lines.mp4')
 
 
 f=1.0 # frequency
@@ -51,36 +47,25 @@ def difff(xy):
 time=arange(-pi/2 , pi/2+tstep, tstep )
 ang=angle(time)
 
-# ang=arange(0, pi/4+tstep, tstep )
 
 x = [ r*sin(a) for a in ang] 
 y = [ r*cos(a) for a in ang] 
 
-# data = np.random.rand(2, 25)
-# print (data)
-# print()
-# print (x)
-# print (y)
-# data = np.concatenate((x,y), axis=1)
-data =np.array([x,y])
-print (data)
-# l, = plt.plot([], [], 'r-')
+positions =np.array([x,y]) # position at given time
 
-
-# 
-# data = difff(data)
-data = np.diff(data)/tstep
-data = np.diff(data)/tstep
+# data = difff(data) np. does exactly the same. 
+speedS = np.diff(positions)/tstep # 
+accelration = np.diff(speedS)/tstep
 l, = plt.plot([], [], 'r-')
-# plt.xlim(-1, 1)
-# plt.ylim(0, 1)
 
-plt.xlim(np.amin(data[0]),np.amax(data[0]))
-plt.ylim(np.amin(data[1]),np.amax(data[1]))
+plotdata=positions
+
+plt.xlim(np.amin(plotdata[0]),np.amax(plotdata[0]))
+plt.ylim(np.amin(plotdata[1]),np.amax(plotdata[1]))
 
 plt.xlabel('x')
 plt.title('test')
-line_ani = animation.FuncAnimation(fig1, update_line, len(time), fargs=(data, l),
+line_ani = animation.FuncAnimation(fig1, update_line, len(time), fargs=(plotdata, l),
                                     interval=50, blit=True)
 # plt.scatter(x,y)
 plt.show()

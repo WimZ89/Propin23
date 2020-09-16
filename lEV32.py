@@ -14,6 +14,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 
+
 def update_line(num, data, line):
     line.set_data(data[..., :num])
     return line,
@@ -28,11 +29,27 @@ t=0.0 # current time
 tstep=0.02 #time step
 r=1.0   #radius
 
+def close(a,b,error):
+    if a > b + error*a:
+        return False
+    if a < b - error*a:
+        return False
+    return True
 
+assert (    close(1,1.01,0.015))
+assert (not close(1,1.01,0.005))
+assert (    close(1,0.99,0.015))
+assert (not close(1,0.99,0.005))
 
-def angle(ti):
-    p=[pi/4.0 + pi/4.0 * sin(t*f) for t in ti]
+def angle(ti,centerangle,sweepangle, frequency):
+    p=[centerangle + sweepangle * sin(t*frequency) for t in ti]
     return p 
+
+print (angle([1],1,2,1))
+print (1+2*sin(1*1))
+# exit(0)
+assert ( close( angle([0],1,2,1)[0], 1.0, 0.0001))
+assert ( close( angle([1],1,2,1)[0],1+2*sin(1*1),0.0001))
 
 def difff(xy):
     x,y=[],[]
@@ -43,10 +60,16 @@ def difff(xy):
         y.append(xy[1][i+1]-xy[1][i])
     return np.array([x,y])
 
+centerangle,sweepangle = pi/4.0,pi/8.0
 
 time=arange(-pi/2 , pi/2+tstep, tstep )
-ang=angle(time)
+ang=angle(time,centerangle,sweepangle, f)
 
+assert ( close( np.max(ang), centerangle + sweepangle, 0.01))
+assert ( close( np.min(ang), centerangle - sweepangle, 0.01))
+
+assert (2==2)
+# assert (max(ang)=)
 
 x = [ r*sin(a) for a in ang] 
 y = [ r*cos(a) for a in ang] 

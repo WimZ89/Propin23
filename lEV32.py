@@ -24,10 +24,11 @@ fig1 = plt.figure()
 
 
 
-f=1.0 # frequency
-t=0.0 # current time
-tstep=0.02 #time step
-r=1.0   #radius
+f=1.0       # frequency
+t=0.0       # current time
+tstep=0.02  #time step
+r=1.0       #radius
+tstep *= 10
 
 def close(a,b,error):
     if a > b + error*a:
@@ -51,14 +52,6 @@ print (1+2*sin(1*1))
 assert ( close( angle([0],1,2,1)[0], 1.0, 0.0001))
 assert ( close( angle([1],1,2,1)[0],1+2*sin(1*1),0.0001))
 
-def difff(xy):
-    x,y=[],[]
-    print("len",len(xy[0]))
-    for i in range(len(xy[0])-1):
-        print (i)
-        x.append(xy[0][i+1]-xy[0][i])
-        y.append(xy[1][i+1]-xy[1][i])
-    return np.array([x,y])
 
 centerangle,sweepangle = pi/4.0,pi/8.0
 
@@ -76,9 +69,18 @@ y = [ r*cos(a) for a in ang]
 
 positions =np.array([x,y]) # position at given time
 
-# data = difff(data) np. does exactly the same. 
-speedS = np.diff(positions)/tstep # 
-accelration = np.diff(speedS)/tstep
+
+# speed depends on previous position and time it took to go there 
+Speed = np.diff(positions)/tstep   
+print (Speed)
+# speed depends on previous speed and time it took to change it 
+Accel = np.diff(Speed)/tstep
+print (Accel)
+
+exit(0)
+
+
+
 l, = plt.plot([], [], 'r-')
 
 plotdata=positions
@@ -96,3 +98,14 @@ plt.show()
 
 
 print ("Done" , len(time))
+
+
+# def difff(xy):
+#     x,y=[],[]
+#     print("len",len(xy[0]))
+#     for i in range(len(xy[0])-1):
+#         print (i)
+#         x.append(xy[0][i+1]-xy[0][i])
+#         y.append(xy[1][i+1]-xy[1][i])
+#     return np.array([x,y])
+# data = difff(data) np. does exactly the same.

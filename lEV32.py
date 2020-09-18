@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 
 # from PyQt5.QtWidgets import (QWidget, QApplication, QPushButton, QLabel, QHBoxLayout, QSizePolicy)
 import matplotlib.animation as animation
+from sympy.physics.units.definitions.dimension_definitions import mass
 
 
 
@@ -28,6 +29,7 @@ f=1.0       # frequency
 t=0.0       # current time
 tstep=0.02  #time step
 r=1.0       #radius
+mass=1      #mass of object
 
 tstep=0.5  #time step
 
@@ -88,7 +90,7 @@ y = [ 0, 4, 5, 5, 3, -1]
 # positions =np.array([x,y]) # position at given time
 positions = [ x,y]
 resume( 3, positions)
-haltit(2, positions)
+haltit( 2, positions)
 
 positions=np.array(positions)
 

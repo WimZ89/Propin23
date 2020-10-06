@@ -33,34 +33,35 @@ mass=1      #mass of object
 
 tstep=0.5  #time step
 
-def close(a,b,error):
+def nearby(a,b,error):
     if a > b + error*a:
         return False
     if a < b - error*a:
         return False
     return True
 
-assert (    close(1,1.01,0.015))
-assert (not close(1,1.01,0.005))
-assert (    close(1,0.99,0.015))
-assert (not close(1,0.99,0.005))
+assert (    nearby(1,1.01,0.015))
+assert (not nearby(1,1.01,0.005))
+assert (    nearby(1,0.99,0.015))
+assert (not nearby(1,0.99,0.005))
 
 def angle(ti,centerangle,sweepangle, frequency):
     p=[centerangle + sweepangle * sin(t*frequency) for t in ti]
     return p 
 
 def resume(steps,positions):
+    # no force applied. same speed. same direction
     for _ in range(steps):
         for j in [0,1]:
             new=positions[j][-1]+positions[j][-1] - positions[j][-2]
             positions[j]+=[new]
 
 def haltit(steps,positions):
+    # repeat same positition
     for _ in range(steps):
         for j in [0,1]:
             new=positions[j][-1]
             positions[j]+=[new]
-
 
 def debug(variable):
     varval=eval(variable)
@@ -68,9 +69,9 @@ def debug(variable):
     
 # print (angle([1],1,2,1))
 # print (1+2*sin(1*1))
-# exit(0)
-assert ( close( angle([0],1,2,1)[0], 1.0, 0.0001))
-assert ( close( angle([1],1,2,1)[0],1+2*sin(1*1),0.0001))
+# exit(0)debug
+assert ( nearby( angle([0],1,2,1)[0], 1.0, 0.0001))
+assert ( nearby( angle([1],1,2,1)[0],1+2*sin(1*1),0.0001))
 
 
 centerangle,sweepangle = pi/4.0,pi/8.0
@@ -78,8 +79,8 @@ centerangle,sweepangle = pi/4.0,pi/8.0
 time=arange(-pi/2 , pi/2+tstep, tstep )
 ang=angle(time,centerangle,sweepangle, f)
 
-assert ( close( np.max(ang), centerangle + sweepangle, 0.01))
-assert ( close( np.min(ang), centerangle - sweepangle, 0.01))
+assert ( nearby( np.max(ang), centerangle + sweepangle, 0.01))
+assert ( nearby( np.min(ang), centerangle - sweepangle, 0.01))
 
 assert (2==2)
 # assert (max(ang)=)

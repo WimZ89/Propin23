@@ -28,12 +28,14 @@ def update_line(num, data, line):
 
 fig1 = plt.figure()
 
+# er is geupdate.
+
+# Auto merge
 
 
-
+tstep=0.02  #time step
 f=1.0       # frequency
 t=0.0       # current time
-tstep=0.02  #time step
 r=1.0       #radius
 mass=1      #mass of object
 

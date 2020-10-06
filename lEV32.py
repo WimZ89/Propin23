@@ -3,14 +3,6 @@ Created on Sep 2, 2020
 Proof that it is impossible to make a force without a counteforce
 @author: wimz
 
-
-changed on webchanged on webchanged on webchanged on webchanged on web
-hoe dan???
-egit verbetert
-
-hier nog toevoegen
-end afmaken voor morgen
-
 '''
 
 import numpy as np
@@ -19,7 +11,6 @@ from math import pi
 from numpy import arange,sin,cos
 import matplotlib.pyplot as plt
 
-# from PyQt5.QtWidgets import (QWidget, QApplication, QPushButton, QLabel, QHBoxLayout, QSizePolicy)
 import matplotlib.animation as animation
 from sympy.physics.units.definitions.dimension_definitions import mass
 
@@ -30,10 +21,6 @@ def update_line(num, data, line):
     return line,
 
 fig1 = plt.figure()
-
-# er is geupdate.
-
-# Auto merge
 
 
 tstep=0.02  #time step
@@ -50,7 +37,6 @@ def nearby(a,b,error):
     if a < b - error*a:
         return False
     return True
-// wat iS DIT!!!
 
 assert (    nearby(1,1.01,0.015))
 assert (not nearby(1,1.01,0.005))
@@ -79,10 +65,6 @@ def debug(variable):
     varval=eval(variable)
     print (variable, '=\n', repr(varval) )
     
-# print (angle([1],1,2,1))
-# print (1+2*sin(1*1))
-# exit(0)debug
-oude meuk eruit.
 
 assert ( nearby( angle([0],1,2,1)[0], 1.0, 0.0001))
 assert ( nearby( angle([1],1,2,1)[0],1+2*sin(1*1),0.0001))
@@ -96,8 +78,6 @@ ang=angle(time,centerangle,sweepangle, f)
 assert ( nearby( np.max(ang), centerangle + sweepangle, 0.01))
 assert ( nearby( np.min(ang), centerangle - sweepangle, 0.01))
 
-assert (2==2)
-# assert (max(ang)=)
 
 x = [ 0, 3, 5, 8, 11 ,13] 
 y = [ 0, 4, 5, 5, 3, -1] 

@@ -4,6 +4,7 @@ Proof that it is impossible to make a force without a counteforce
 @author: wimz
 
 changed on web
+hoe dan???
 '''
 
 import numpy as np

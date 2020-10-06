@@ -8,6 +8,9 @@ changed on webchanged on webchanged on webchanged on webchanged on web
 hoe dan???
 egit verbetert
 
+hier nog toevoegen
+end afmaken voor morgen
+
 '''
 
 import numpy as np
@@ -47,6 +50,7 @@ def nearby(a,b,error):
     if a < b - error*a:
         return False
     return True
+// wat iS DIT!!!
 
 assert (    nearby(1,1.01,0.015))
 assert (not nearby(1,1.01,0.005))
@@ -78,6 +82,8 @@ def debug(variable):
 # print (angle([1],1,2,1))
 # print (1+2*sin(1*1))
 # exit(0)debug
+oude meuk eruit.
+
 assert ( nearby( angle([0],1,2,1)[0], 1.0, 0.0001))
 assert ( nearby( angle([1],1,2,1)[0],1+2*sin(1*1),0.0001))
 

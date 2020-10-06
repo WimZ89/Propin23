@@ -2,6 +2,7 @@
 Created on Sep 2, 2020
 Proof that it is impossible to make a force without a counteforce
 @author: wimz
+commit ssh 1af81fdf804458fa25f2e8af86b2905aaccfd5ac
 
 '''
 

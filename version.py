@@ -2,6 +2,7 @@
 Created on Aug 21, 2020
 
 @author: wimz
+hoelang niets gedaan?
 '''
 import sys
 

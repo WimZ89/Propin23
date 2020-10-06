@@ -12,6 +12,8 @@ commit ssh 1af81fdf804458fa25f2e8af86b2905aaccfd5ac
 
 verder met laatste. test mislukt
 
+oopn mobile phone this is fighting quotes
+
 '''
 
 import numpy as np

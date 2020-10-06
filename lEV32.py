@@ -6,6 +6,8 @@ Proof that it is impossible to make a force without a counteforce
 
 changed on webchanged on webchanged on webchanged on webchanged on web
 hoe dan???
+egit verbetert
+
 '''
 
 import numpy as np

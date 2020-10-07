@@ -16,6 +16,7 @@ oopn mobile phone this is fighting quotes
 
 wijziging zim zim zim
 
+ja komt binne
 
 '''
 

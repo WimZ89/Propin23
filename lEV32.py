@@ -115,8 +115,8 @@ Accel = np.diff(Speed)/tstep
 debug ("Accel")
 
 
-
-exit(0)
+# 
+# exit(0)
 
 
 

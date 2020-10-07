@@ -14,6 +14,9 @@ verder met laatste. test mislukt
 
 oopn mobile phone this is fighting quotes
 
+wijziging zim zim zim
+
+
 '''
 
 import numpy as np

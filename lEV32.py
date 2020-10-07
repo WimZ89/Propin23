@@ -27,7 +27,6 @@ from numpy import arange,sin,cos
 import matplotlib.pyplot as plt
 
 import matplotlib.animation as animation
-from sympy.physics.units.definitions.dimension_definitions import mass
 
 
 

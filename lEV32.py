@@ -12,6 +12,12 @@ commit ssh 1af81fdf804458fa25f2e8af86b2905aaccfd5ac
 
 verder met laatste. test mislukt
 
+oopn mobile phone this is fighting quotes
+
+wijziging zim zim zim
+
+ja komt binne
+
 '''
 
 import numpy as np
@@ -21,7 +27,6 @@ from numpy import arange,sin,cos
 import matplotlib.pyplot as plt
 
 import matplotlib.animation as animation
-from sympy.physics.units.definitions.dimension_definitions import mass
 
 
 
@@ -109,8 +114,8 @@ Accel = np.diff(Speed)/tstep
 debug ("Accel")
 
 
-
-exit(0)
+# 
+# exit(0)
 
 
 

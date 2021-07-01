@@ -6,7 +6,7 @@ Created on Dec 28, 2020
 
 from copy import deepcopy
 
-f=open("Uren220.txt", "r")
+f=open("UREN21.txt", "r")
 lines=f.readlines()
 
 items=[]
@@ -26,11 +26,12 @@ for i in items:
     for l in i:
         if l.startswith("DTSTART"):
             t=l.split(":")[1].strip()
-#             print (t)    
+            print (t)    
         if l.startswith("SUMMARY"):
             s=l.split(":")[1].strip()
             if s.startswith("Werk"):
                 u=s.split(" ")[1]
+                u=u.replace(",",".")
                 try:
                     u=float(u)
                 except:

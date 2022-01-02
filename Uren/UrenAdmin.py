@@ -1,6 +1,6 @@
 '''
 Created on Dec 28, 2020
-
+get the hour 
 @author: wimz
 '''
 

@@ -38,14 +38,11 @@ def addvarf(s,val):
 tics    = 64
 dt      = 0.1  #time each tic
 v       = 1.0 
-r       = 1.0
-m       = 1.0
+r       = 0.1
+m       = 0.1
 F       = 0.0
 
-# time = arange(0.0, dt*tics, dt)
-# showvar ("time")
 triggers=[j*pi for j in range(10)]
-# showvar(triggers)
 
 pos=[0.0]
 phi=[0.0]

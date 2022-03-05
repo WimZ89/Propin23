@@ -37,3 +37,6 @@ for kwaliteit in data:
         print (line)
     i+=1
 print (i,cnt)
+
+for kwaak in data:
+    if len(kwaak)

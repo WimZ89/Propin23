@@ -13,7 +13,7 @@ import numpy as np
 
 from math import pi,sin
 from numpy import arange,sin,cos
-from twisted.conch.client import direct
+# from twisted.conch.client import direct
 
 def showvar(variable):
     varval=eval(variable)

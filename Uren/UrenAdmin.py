@@ -7,7 +7,7 @@ get the hour
 from copy import deepcopy
 import pandas as pd
 
-f = open("UREN_hom21kum9j6s2s59jtkk6gijn8@group.calendar.google.com.ics", "r")
+f = open("old/UREN_hom21kum9j6s2s59jtkk6gijn8@group.calendar.google.com.ics", "r")
 lines = f.readlines()
 
 items = []

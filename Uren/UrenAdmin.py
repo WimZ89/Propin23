@@ -49,8 +49,12 @@ df = pd.DataFrame(work2)
 for year in ["2020", "2021", "2022", ]:
     print()
     df21 = df[df.date.str[:4] == year]
+    print(df21.to_dict("list"))
     print(year, df21["hours"].sum())
     print(df21["hours"].describe())
+    duplicates = df21[df21.duplicated()]
+    if len(duplicates) > 0:
+        print(duplicates)
     # print(df21["hours"].unique())
 # for w in work:
 #     print(w)

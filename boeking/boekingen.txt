@@ -1,0 +1,80 @@
+Boekingen
+	Verzekering
+		Monuta Verzekeringen NV
+		Goudse Schadeverzekeringen NV
+		ASR LEVENSVERZEKERING
+		REAAL LEVENSVERZEKERING
+		STAD HOLLAND ZORGVERZEK
+	Huis
+		ING Hypotheken
+		ING Bank N.V. Hypotheken
+		Kosten RoyaalPakket
+	Belasting
+		BELASTINGDIENST
+		GBLT
+		GBTwente
+		Belastingdienst Apeldoorn
+	Inkomen
+		Mic-O-Data B.V.
+		Mw F Su
+		W. Zaagman
+	Energie
+		Essent Retail Energie B.V
+		VITENS NV
+		Energiewacht B.V.
+		ESSENT RETAIL ENERG
+	Eten
+		KK SUPERMARKT BAD BEN
+		ALDI SAGT DANKE BAD BENTHEIM DEU
+		EDEKA BOSSAT BAD BENTHEIM DEU
+		Lidl Dienstleistung Bad Bentheim
+	Drogist
+		DMDrogerie Markt BadBentheim DEU
+		Kruidvat 4340 OLDENZAAL NLD
+		Medikamen die Grenze OLDENZAAL
+		Kruidvat 7336 OLDENZAAL NLD
+		DMDrogerie Markt Nordhorn DEU
+	Comm
+		ZIGGO SERVICES BV
+		VODAFONE LIBERTEL BV
+	Brandstof
+		Esso Expr De Lutte DE LUTTE NLD
+		FJ Rolink BV DE LUTTE NLD
+		KINGFISHER REAL ESTATE B
+		CCVKingfisher Real Es OLDENZAAL
+	Auto
+		ANWB B.V.
+		Auto Meijerink
+	Eten
+		Aldi 011 OLDENZAAL NLD
+		Spar Schreur DE LUTTE NLD
+		KlaasKock Fil  249 Bad Bentheim
+		REWE Rafael Doering oH Nordhorn
+		Lidl Dienstleistung Nordhorn DEU
+		ALDI SAGT DANKE NORDHORN DEU
+		Jumbo Kuipers Oldenzaa OLDENZAAL
+	Contant
+		GELDMAAT DORPSTRAAT 1 DE LUTTE
+	Hobby
+		Vereniging de Evangelische Omroep
+		Action 1197 Oldenzaal NLD
+		McDonalds Oldenzaal OLDENZAAL
+		McDonalds Westermaat HENGELO OV
+		Jysk SE Bad Bentheim DEU
+		Mediamarkt Hengelo HENGELO OV
+		TUINCENTRUM OOSTERIK DENEKAMP
+		1DMV01 Gamma OZaal OLDENZAAL NLD
+		MCDONALDS 0425 NORDHORN DEU
+		XXXLUTZ NORDHORN NORDHORN DEU
+		MEDIA MARKT TVHIFIEL NORDHORN
+		Thomas Philipps GmbH
+	Kleding
+		DEICHMANN Bad Bentheim 15
+		KiK Fil 1548 Bad Bentheim DEU
+		KiK Fil  8011 Nordhorn DEU
+		DEICHMANN Nordhorn 121 Nordhorn
+		Takko 1319 Nordhorn DEU
+		DEICHMANN Bad Bentheim
+	Contant
+		Geldmaat de Lutte NLD
+	All

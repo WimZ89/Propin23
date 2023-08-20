@@ -13,16 +13,22 @@ for folder in folders:
     # continue
     # folder example: ('FOLDER/3', [], ['file'])
     if not folder[2]:  # folder is empty
-        # print (len(folder),folder)
-        print(folder[2])
+        print("Folder is empty:", folder[0])
         try:
             os.rmdir(folder[0])
-            print("removed", folder[0])
-            # break
+            print("Removed empty folder:", folder[0])
         except OSError:
-            print("OSError", folder[0])
+            print("OSError: Unable to remove folder", folder[0])
     else:
-        print("not empty")
-        ext_to_del=["txt","nfo"]
-        # todo delete all files with extension ext_to_del
+        print("Folder is not empty")
+        ext_to_del = ["txt", "nfo"]
 
+        for filename in folder[2]:
+            file_ext = filename.split(".")[-1]
+            if file_ext in ext_to_del:
+                file_path = os.path.join(folder[0], filename)
+                try:
+                    os.remove(file_path)
+                    print(f"Removed file {filename} in folder {folder[0]}")
+                except OSError:
+                    print(f"OSError: Unable to remove {filename} in folder {folder[0]}")

@@ -35,7 +35,7 @@ for l in lines:
         new_cat = l[-1].strip()
     elif len(l) == 3:
         add_cat = {"category": new_cat, "description": l[-1].strip()} #, "idx":1}
-        # print(add_cat)
+        # print(add_cat) 
         new_cats.append(add_cat)
 
 # cats = pd.concat([cats, pd.DataFrame(add_cat)], ignore_index=True)

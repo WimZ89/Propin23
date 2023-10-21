@@ -1,6 +1,6 @@
 import os
 
-root = 't:/torrentz'
+root = 't:/torrenz2'
 folders = list(os.walk(root))[1:]
 print(f"Found {len(folders)} folders")
 # [0] full path.

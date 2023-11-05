@@ -69,7 +69,7 @@ df = pd.DataFrame(work2)
 
 if __name__ == '__main__':
     for year in ["2020", "2021", "2022", "2023", ]:  # uren per jaar
-        print()
+        print(f"________ Overzicht {year}")
         df21 = df[df.date.str[:4] == year]  # filter on year
         # print(df21.to_dict("list"))
         print("Totaal uren", year, df21["hours"].sum())

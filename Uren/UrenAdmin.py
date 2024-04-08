@@ -10,7 +10,7 @@ from copy import deepcopy
 from datetime import datetime
 
 import pandas as pd
-
+from datetime import datetime
 
 def frac_year():
     date_obj = datetime.now()
@@ -68,12 +68,12 @@ for i in items:
 df = pd.DataFrame(work2)
 
 if __name__ == '__main__':
-    for year in ["2020", "2021", "2022", "2023", ]:  # uren per jaar
+    for year in ["2020", "2021", "2022", "2023", "2024", ]:  # uren per jaar
         print(f"________ Overzicht {year}")
         df21 = df[df.date.str[:4] == year]  # filter on year
         # print(df21.to_dict("list"))
         print("Totaal uren", year, df21["hours"].sum())
-        print(df21["hours"].describe())
+        # print(df21["hours"].describe())
         duplicates = df21[df21.duplicated()]
         if len(duplicates) > 0:
             print(duplicates)
@@ -81,4 +81,16 @@ if __name__ == '__main__':
     # for w in work:
     #     print(w)
 
+
+# Get today's date
+today = datetime.now()
+
+# Create a datetime object for January 1st of the current year
+jan_1 = datetime(today.year, 1, 1)
+
+# Calculate the difference in days between today and January 1st
+days_since_jan_1 = (today - jan_1).days
+
+print("Days since January 1st this year:", days_since_jan_1)
 print("Verwachte uren", year, frac_year()*1818)
+

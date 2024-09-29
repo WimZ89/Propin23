@@ -32,7 +32,7 @@ f = open("UREN_hom21kum9j6s2s59jtkk6gijn8@group.calendar.google.com.ics", "r")
 lines = f.readlines()
 
 items = []
-
+new = []
 for i in range(len(lines)):
     l = lines[i]
     if l.startswith("BEGIN:"):
@@ -44,7 +44,7 @@ for i in range(len(lines)):
 work = []
 work2 = []
 for i in items:
-    u = 0.0
+    hours = 0.0
     for l in i:
         if l.startswith("DTSTART"):
             t = l.split(":")[1].strip()[:8]
@@ -53,21 +53,21 @@ for i in items:
             s = l.split(":")[1].strip()
             first_word = s.split()[0].lower()
             if first_word in ["ziek","werkuren"]:
-                u = s.split(" ")[1]
-                u = u.replace(",", ".")
-                u = u.replace("\\", "")
+                hours = s.split(" ")[1]
+                hours = hours.replace(",", ".")
+                hours = hours.replace("\\", "")
 
-                u = float(u)
+                hours = float(hours)
                 try:
-                    u = float(u)
+                    hours = float(hours)
                 except:
-                    print("***%s**** in line %s" % (u, l))
+                    print("***%s**** in line %s" % (hours, l))
             else:
                 pass
                 # print ("skip",s,first_word)
-    if u > 0.0:
-        work.append("%s : %20s = %f" % (t, s, u))
-        work2.append({"date": t, "hours": u})
+    if hours > 0.0:
+        work.append("%s : %20s = %f" % (t, s, hours))
+        work2.append({"date": t, "hours": hours})
 
 df = pd.DataFrame(work2)
 
@@ -76,18 +76,19 @@ if __name__ == '__main__':
     for year in ["2020", "2021", "2022", "2023", "2024", ]:  # uren per jaar
         print(f"________ Overzicht {year}")
         df_work = df[df.date.str[:4] == year]  # filter on year
-        # print(df21.to_dict("list"))
-        hours_worked = df_work["hours"].sum()
-        print("Totaal uren", year, hours_worked)
-        # print(df21["hours"].describe())
         duplicates = df_work[df_work.duplicated()]
         if len(duplicates) > 0:
+            # seems a google bug. once in editor. twice in log
             print ("ERROR duplicates")
             print(duplicates)
+            print ("dropping")
+            df_work = df_work.drop_duplicates()
+        hours_worked = df_work["hours"].sum()
+        print("Totaal uren", year, hours_worked)
 
 # Get today's date
     df_work = df_work.sort_values("date")
-    print (df_work.tail())
+    print (df_work.tail(20))
     today = datetime.now()
 
     # Create a datetime object for January 1st of the current year

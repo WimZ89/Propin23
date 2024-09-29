@@ -72,19 +72,22 @@ for i in items:
 df = pd.DataFrame(work2)
 
 if __name__ == '__main__':
-    hours_worked = 0
+    # hours_worked = 0
     for year in ["2020", "2021", "2022", "2023", "2024", ]:  # uren per jaar
         print(f"________ Overzicht {year}")
-        df21 = df[df.date.str[:4] == year]  # filter on year
+        df_work = df[df.date.str[:4] == year]  # filter on year
         # print(df21.to_dict("list"))
-        hours_worked = df21["hours"].sum()
+        hours_worked = df_work["hours"].sum()
         print("Totaal uren", year, hours_worked)
         # print(df21["hours"].describe())
-        duplicates = df21[df21.duplicated()]
+        duplicates = df_work[df_work.duplicated()]
         if len(duplicates) > 0:
+            print ("ERROR duplicates")
             print(duplicates)
 
 # Get today's date
+    df_work = df_work.sort_values("date")
+    print (df_work.tail())
     today = datetime.now()
 
     # Create a datetime object for January 1st of the current year

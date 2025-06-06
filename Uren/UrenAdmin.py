@@ -73,7 +73,7 @@ df = pd.DataFrame(work2)
 
 if __name__ == '__main__':
     # hours_worked = 0
-    for year in ["2020", "2021", "2022", "2023", "2024", ]:  # uren per jaar
+    for year in ["2020", "2021", "2022", "2023", "2024","2025" ]:  # uren per jaar
         print(f"________ Overzicht {year}")
         df_work = df[df.date.str[:4] == year]  # filter on year
         duplicates = df_work[df_work.duplicated()]
